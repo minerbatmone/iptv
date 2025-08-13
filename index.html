@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NTV Premium — Filmes, Séries e Canais 4K</title>
+  <meta name="description" content="NTV Premium — +50 mil conteúdos em qualidade 4K. Assine agora ou faça o teste. Pagamento rápido e seguro." />
+  <meta property="og:title" content="NTV Premium — Filmes, Séries e Canais 4K" />
+  <meta property="og:description" content="+50 mil conteúdos. 4K. Ofertas especiais. Clique e assine." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://dummyimage.com/1200x630/0b0b0e/f6c132&text=NTV+PREMIUM" />
+  <meta name="theme-color" content="#0b0b0e" />
+  <link rel="preconnect" href="https://connect.facebook.net">
+  <style>
+    :root{
+      --bg:#0b0b0e; /* preto grafite */
+      --card:#121217;
+      --gold:#f6c132;
+      --gold-2:#d6a324;
+      --text:#e9e9ef;
+      --muted:#9aa0a6;
+      --accent:#ff3b3b;
+      --ok:#36d399;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:radial-gradient(1200px 700px at 10% -10%, #15151c 0%, var(--bg) 55%);color:var(--text);font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol";
+    }
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1120px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg, rgba(11,11,14,.95), rgba(11,11,14,.65));backdrop-filter:saturate(140%) blur(6px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{display:grid;place-items:center;width:44px;height:44px;border:2px solid var(--gold);border-radius:999px;color:var(--gold);font-weight:800;letter-spacing:.5px;box-shadow:inset 0 0 0 2px rgba(246,193,50,.15)}
+    .badge{padding:6px 10px;border-radius:999px;background:rgba(246,193,50,.1);border:1px solid rgba(246,193,50,.35);color:var(--gold);font-weight:700;font-size:.8rem}
+    .cta{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(180deg,var(--gold),var(--gold-2));color:#0a0a0c;border:none;border-radius:14px;padding:13px 18px;font-weight:800;box-shadow:var(--shadow);transition:.2s;cursor:pointer}
+    .cta:hover{transform:translateY(-1px);filter:saturate(1.05)}
+    .ghost{background:transparent;border:1px solid rgba(255,255,255,.14);color:var(--text)}
+
+    /* hero */
+    .hero{padding:56px 0 30px;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
+    .hero h1{font-size:clamp(28px, 3.2vw, 46px);line-height:1.05;margin:0 0 12px;font-weight:900}
+    .hero p{color:var(--muted);margin:0 0 26px}
+    .hero .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .screen{border-radius:var(--radius);background:linear-gradient(180deg,#0e0e13,#07070a);border:1px solid rgba(255,255,255,.07);box-shadow:var(--shadow);padding:18px}
+    .screen .glass{aspect-ratio:16/9;border-radius:14px;background:
+      radial-gradient(120% 90% at 80% 10%, rgba(246,193,50,.18), transparent 60%),
+      radial-gradient(90% 70% at 15% 85%, rgba(255,59,59,.12), transparent 60%),
+      linear-gradient(180deg,#1a1a22,#0c0c12);
+      border:1px solid rgba(255,255,255,.06);
+      position:relative;overflow:hidden}
+    .glass:after{content:"4K";position:absolute;right:10px;top:10px;font-weight:900;color:var(--gold);background:rgba(246,193,50,.1);border:1px solid rgba(246,193,50,.4);padding:4px 8px;border-radius:999px;font-size:.8rem}
+
+    /* trust */
+    .trust{display:flex;gap:18px;flex-wrap:wrap;margin-top:16px;color:var(--muted);font-size:.9rem}
+    .trust .item{display:flex;align-items:center;gap:8px;padding:8px 12px;border:1px dashed rgba(255,255,255,.12);border-radius:999px}
+
+    /* plans */
+    .plans{padding:18px 0 12px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:linear-gradient(180deg,#121217,#0c0c12);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+    .popular{outline:2px solid rgba(246,193,50,.45);box-shadow:0 0 0 12px rgba(246,193,50,.08), var(--shadow);position:relative}
+    .popular:before{content:"MAIS POPULAR";position:absolute;top:-12px;left:18px;background:linear-gradient(180deg,var(--gold),var(--gold-2));color:#0a0a0c;font-weight:900;font-size:.75rem;padding:6px 10px;border-radius:999px}
+    .price{font-weight:900;font-size:clamp(28px,3.2vw,40px);color:var(--gold);}
+    .per{color:var(--muted);font-weight:600}
+    .feat{display:flex;align-items:center;gap:10px;padding:8px 0;color:#cfd2d9}
+    .check{width:18px;height:18px;border-radius:4px;background:linear-gradient(180deg,#1f2f26,#151d18);border:1px solid rgba(54,211,153,.5);display:grid;place-items:center}
+    .check svg{width:12px;height:12px;fill:var(--ok)}
+
+    /* benefits */
+    .benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:8px}
+    .b{background:linear-gradient(180deg,#13131a,#0c0c12);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:14px}
+
+    /* faq */
+    .faq{margin:26px 0}
+    details{background:#101017;border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:14px 16px;margin:10px 0}
+    summary{cursor:pointer;font-weight:700}
+    details p{color:var(--muted);margin:10px 0 0}
+
+    footer{opacity:.9;border-top:1px solid rgba(255,255,255,.08);padding:22px 0;color:#b6bac4}
+
+    /* floating WA */
+    .wa{position:fixed;right:16px;bottom:16px;z-index:60;background:#25D366;border:none;color:#071b10;border-radius:999px;padding:12px 16px;font-weight:900;box-shadow:var(--shadow)}
+
+    /* responsive */
+    @media (max-width:960px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      .benefits{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width:520px){
+      .benefits{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <!-- Meta Pixel base code (ID do Leonardo) -->
+  <script>
+    (function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)})(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init','777389714751398');
+    fbq('track','PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" alt=""
+    src="https://www.facebook.com/tr?id=777389714751398&ev=PageView&noscript=1"/></noscript>
+
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">NTV</div>
+        <div>
+          <strong style="display:block;font-weight:900;letter-spacing:.2px">NTV Premium</strong>
+          <small style="color:var(--muted)">Filmes • Séries • Canais • 4K</small>
+        </div>
+        <span class="badge">OFICIAL</span>
+      </div>
+      <div class="actions">
+        <a class="cta ghost" href="#planos">Ver planos</a>
+        <a class="cta" href="https://ntvfilmes.com.br/planos" target="_blank" rel="noopener" onclick="fbq('trackCustom','CliqueCTA',{cta:'Topo-AssineAgora'})">Assinar agora</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" id="inicio">
+      <div>
+        <h1>+50 mil conteúdos em <span style="color:var(--gold)">4K</span>. Tudo num só lugar.</h1>
+        <p>Filmes, séries, canais ao vivo e adultos. Acesso rápido, sem burocracia e com suporte humano.</p>
+        <div class="actions">
+          <a class="cta" href="https://ntvfilmes.com.br/planos" target="_blank" rel="noopener" onclick="fbq('trackCustom','CliqueCTA',{cta:'Hero-Assinar'})">Assinar agora</a>
+          <a class="cta ghost" href="#planos">Conhecer planos</a>
+        </div>
+        <div class="trust">
+          <div class="item">⚡ Ativação imediata</div>
+          <div class="item">🔒 Pagamento seguro</div>
+          <div class="item">💬 Suporte no WhatsApp</div>
+        </div>
+      </div>
+      <div class="screen">
+        <div class="glass"></div>
+        <div class="trust" style="margin-top:12px">
+          <div class="item">📺 Smart TV</div>
+          <div class="item">📱 Celular</div>
+          <div class="item">💻 PC</div>
+          <div class="item">📟 TV Box</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="plans" id="planos">
+      <h2 style="margin:8px 0 14px">Planos</h2>
+      <div class="grid">
+        <!-- Plano 1 mês -->
+        <article class="card">
+          <h3 style="margin:0 0 6px">Plano Completo 1 mês</h3>
+          <div class="price">R$ 29,47 <span class="per">/mês</span></div>
+          <div class="feat"><span class="check"> <svg viewBox="0 0 16 16"><path d="M6.2 10.6L3.6 8l-1 1 3.6 3.6 8-8-1-1z"/></svg></span>Qualidade 4K</div>
+          <div class="feat"><span class="check"><svg viewBox="0 0 16 16"><path d="M6.2 10.6L3.6 8l-1 1 3.6 3.6 8-8-1-1z"/></svg></span>1 conexão simultânea</div>
+          <a class="cta" href="https://ntvfilmes.com.br/planos" target="_blank" rel="noopener" onclick="fbq('trackCustom','CliquePlano',{plano:'1-mes'})">Assinar</a>
+        </article>
+        <!-- Plano 6 meses -->
+        <article class="card popular">
+          <h3 style="margin:0 0 6px">Plano Completo 6 meses</h3>
+          <div class="price">R$ 150,00 <span class="per">/6 meses</span></div>
+          <div class="feat"><span class="check"><svg viewBox="0 0 16 16"><path d="M6.2 10.6L3.6 8l-1 1 3.6 3.6 8-8-1-1z"/></svg></span>Qualidade 4K</div>
+          <div class="feat"><span class="check"><svg viewBox="0 0 16 16"><path d="M6.2 10.6L3.6 8l-1 1 3.6 3.6 8-8-1-1z"/></svg></span>1 conexão simultânea</div>
+          <a class="cta" href="https://ntvfilmes.com.br/planos" target="_blank" rel="noopener" onclick="fbq('trackCustom','CliquePlano',{plano:'6-meses'})">Assinar</a>
+        </article>
+        <!-- Plano 12 meses -->
+        <article class="card">
+          <h3 style="margin:0 0 6px">Plano Completo 12 meses</h3>
+          <div class="price">R$ 279,90 <span class="per">/ano</span></div>
+          <div class="feat"><span class="check"><svg viewBox="0 0 16 16"><path d="M6.2 10.6L3.6 8l-1 1 3.6 3.6 8-8-1-1z"/></svg></span>Qualidade 4K</div>
+          <div class="feat"><span class="check"><svg viewBox="0 0 16 16"><path d="M6.2 10.6L3.6 8l-1 1 3.6 3.6 8-8-1-1z"/></svg></span>2 conexões simultâneas</div>
+          <a class="cta" href="https://ntvfilmes.com.br/planos" target="_blank" rel="noopener" onclick="fbq('trackCustom','CliquePlano',{plano:'12-meses'})">Assinar</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="benefits" aria-label="benefícios">
+      <div class="b">🧠 Catálogo inteligente com busca rápida</div>
+      <div class="b">🎬 Lançamentos e clássicos sempre atualizados</div>
+      <div class="b">🛡️ Estabilidade e suporte humano</div>
+      <div class="b">💳 Pague em segundos, acesso imediato</div>
+    </section>
+
+    <section class="faq" id="faq">
+      <h2>Perguntas frequentes</h2>
+      <details>
+        <summary>Como funciona o acesso?</summary>
+        <p>Após a confirmação do pagamento, você recebe as instruções para ativar no seu dispositivo preferido. É rápido e sem burocracia.</p>
+      </details>
+      <details>
+        <summary>Em quantos dispositivos posso usar?</summary>
+        <p>Depende do plano. O anual inclui 2 conexões simultâneas. Nos demais, 1 conexão por vez.</p>
+      </details>
+      <details>
+        <summary>Posso assistir em Smart TV, celular e PC?</summary>
+        <p>Sim. Funciona em Smart TV, TV Box, celular Android/iOS e computador.</p>
+      </details>
+      <details>
+        <summary>Tem teste?</summary>
+        <p>As campanhas de teste são sazonais. Se estiver disponível, o botão aparecerá nas ofertas. Você pode falar no WhatsApp para verificar.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between">
+      <small>© <span id="y"></span> NTV Premium — Entretenimento com propósito.</small>
+      <div style="display:flex;gap:10px;opacity:.8">
+        <a href="#inicio">Início</a>·
+        <a href="#planos">Planos</a>·
+        <a href="#faq">FAQ</a>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa" href="https://wa.me/5511999999999?text=Quero%20assinar%20a%20NTV%20Premium" target="_blank" rel="noopener" onclick="fbq('trackCustom','CliqueCTA',{cta:'WhatsApp-Flutuante'})">Falar no WhatsApp</a>
+
+  <script>
+    // ajustes finais
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
